@@ -52,7 +52,7 @@
 	};
 
 	info.update = function (props) {
-		const contents = props ? `<b>${props.NAMELSAD}</b><br />${props.flsa_cl_violtn_cnt} violations<br />involving ${props.flsa_cl_minor_cnt} minors<br />in ${props.naics_code_description} industries` : 'Hover over a state';
+		const contents = props ? `<b>${props.NAMELSAD}</b><br />${props.flsa_cl_violtn_cnt} violations<br />involving ${props.flsa_cl_minor_cnt} minors<br />in ${props.naics_code_description} industries` : 'Hover over a county';
 		this._div.innerHTML = `<h4>Child Labor Violations since Jan 1, 2020</h4>${contents}`;
 	};
 
@@ -96,8 +96,8 @@
 		info.update(layer.feature.properties);
 	}
 
-	/* global whisard_cl_by_county */
-	const geojson = L.geoJson(whisard_cl_by_county, {
+	/* global whisard_cl_data */
+	const geojson = L.geoJson(whisard_cl_data, {
 		style,
 		onEachFeature
 	}).addTo(map);
