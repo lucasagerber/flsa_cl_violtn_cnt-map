@@ -71,7 +71,7 @@
 		return {
 			weight: 1,
 			opacity: 1,
-			color: '#5e4f4a',
+			color: '#FFFFFF',
 			dashArray: '3',
 			fillOpacity: 0.7,
 			fillColor: getColor(feature.properties.flsa_cl_violtn_cnt)
@@ -132,7 +132,7 @@
 			from = grades[i];
 			to = grades[i + 1];
 
-			labels.push(`<i style="background:${getColor(from + 1)}"></i> ${from}${to ? `&ndash;${to}` : '+'} violations`);
+			labels.push(`<i style="background:${getColor(from + 1)}"></i> ${from}${to ? `&ndash;${to}` : '+'}`);
 		}
 
 		div.innerHTML = labels.join('<br>');
