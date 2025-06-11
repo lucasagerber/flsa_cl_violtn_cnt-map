@@ -1,5 +1,4 @@
-var whisard_cl_data = {
-"type": "FeatureCollection",
+var whisard_cl_data = {"type": "FeatureCollection",
 "name": "whisard_cl_by_county",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::4269" } },
 "features": [
